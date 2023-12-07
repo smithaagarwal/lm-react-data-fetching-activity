@@ -1,0 +1,147 @@
+body {
+  font-family: monospace;
+  font-size: large;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid tomato;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+}
+
+ul {
+  margin-top: 0;
+  list-style-type: none;
+  text-wrap: nowrap;
+}
+
+button {
+  max-width: fit-content;
+  font-family: monospace;
+  background-color: #ffdabe;
+  padding: 0.5rem;
+  font-size: 1.03rem;
+}
+
+button:hover {
+  background-color: tomato;
+  color: #fff;
+  font-weight: 900;
+  transition: 200ms;
+}
+footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todo-app {
+  max-width: 700px;
+  padding-bottom: 3rem;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tick-box {
+  cursor: pointer;
+  margin: 1rem;
+  transform: scale(2);
+  accent-color: #080;
+}
+
+.bin-symbol {
+  display: none;
+  margin-left: 1rem;
+}
+
+.task-item {
+  max-width: 80%;
+}
+
+.task-item:hover {
+  transform: scale(1.04);
+  transform: translateX(50);
+  cursor: pointer;
+  .bin-symbol {
+    display: inline;
+  }
+}
+
+.loading-text span {
+  position: relative;
+  opacity: 0;
+  animation: move-text-colour 1.5s forwards infinite;
+}
+
+#task,
+#description {
+  min-width: 90%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .add-todo {
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-start;
+  }
+
+  label {
+    width: 100%;
+  }
+  footer {
+    bottom: 0;
+    width: 100vw;
+  }
+  .clear-local-storage {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  ul {
+    overflow: scroll;
+  }
+  .li:hover {
+    transform: none;
+    overflow: visible;
+  }
+}
+
+@keyframes move-text-colour {
+  0% {
+    bottom: -0.2em;
+    opacity: 1;
+    color: #ff4763;
+  }
+
+  40% {
+    bottom: 0.2em;
+    color: #ff6347;
+  }
+
+  60% {
+    bottom: 0;
+    opacity: 1;
+    color: #000;
+  }
+}
