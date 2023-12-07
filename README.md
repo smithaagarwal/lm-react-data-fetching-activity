@@ -69,7 +69,8 @@ Sure, this is just a mock API, built with MirageJs, but it still has a guide!
 - POST "/poetriumph.com/api/v1/poems"
 
   Responds with object of added poem
-  Required keys: title, body, author
+
+  Required keys on body: title, body, author
 
 ```javascript
 // request body
@@ -89,4 +90,8 @@ Sure, this is just a mock API, built with MirageJs, but it still has a guide!
   }
 ```
 
-- PATCH "/poetriumph.com/api/v1/poems/:id
+- PATCH "/poetriumph.com/api/v1/poems"
+
+  Responds with updated poem
+
+  Required keys on body: id, isLiked
