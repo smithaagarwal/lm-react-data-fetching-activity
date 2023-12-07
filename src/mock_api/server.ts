@@ -42,12 +42,12 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.patch("/poems", (schema, request) => {
         const { id, isLiked } = JSON.parse(request.requestBody)
-        const updatedTodo = schema.db.poems.update(id, { isLiked })
+        const updatedPoem = schema.db.poems.update(id, { isLiked })
         localStorage.setItem(
           "mirage-poem-data",
           JSON.stringify(schema.db.dump())
         )
-        return updatedTodo
+        return updatedPoem
       })
 
       this.del("/poems/:id", (schema, request) => {

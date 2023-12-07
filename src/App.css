@@ -78,12 +78,6 @@ footer {
   justify-content: space-around;
 }
 
-#task,
-#description {
-  min-width: 90%;
-  margin-bottom: 1rem;
-}
-
 @media (max-width: 600px) {
   label {
     width: 100%;
