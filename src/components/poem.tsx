@@ -1,17 +1,17 @@
 import { PoemData } from "./poem_container"
 
-export const Poem: React.FC<PoemData> = ({
-  id,
-  title,
-  body,
-  author,
-  isLiked,
+interface PoemProps {
+  poem: PoemData
+}
+
+export const Poem: React.FC<PoemProps> = ({
+  poem: { id, title, body, author, isLiked },
 }) => {
   return (
     <>
-      <li key={id}>
+      <li key={id} className="poem-item">
         <h3>{title}</h3>
-        <p>{body}</p>
+        <p className="poem-text">{body}</p>
         <p>{author}</p>
         <label>
           Like:{" "}

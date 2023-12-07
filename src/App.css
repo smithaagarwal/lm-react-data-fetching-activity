@@ -49,17 +49,6 @@ footer {
   transform: translateX(-50%);
 }
 
-.todo-app {
-  max-width: 700px;
-  padding-bottom: 3rem;
-}
-
-.add-todo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tick-box {
   cursor: pointer;
   margin: 1rem;
@@ -67,28 +56,26 @@ footer {
   accent-color: #080;
 }
 
-.bin-symbol {
-  display: none;
-  margin-left: 1rem;
+.poem-item {
+  margin: 3rem;
+  border: 2px solid white;
+  padding: 1rem;
 }
 
-.task-item {
-  max-width: 80%;
-}
-
-.task-item:hover {
-  transform: scale(1.04);
-  transform: translateX(50);
-  cursor: pointer;
-  .bin-symbol {
-    display: inline;
-  }
+.poem-text {
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .loading-text span {
   position: relative;
   opacity: 0;
   animation: move-text-colour 1.5s forwards infinite;
+}
+
+.add-poem {
+  display: flex;
+  justify-content: space-around;
 }
 
 #task,
@@ -98,12 +85,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .add-todo {
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: flex-start;
-  }
-
   label {
     width: 100%;
   }

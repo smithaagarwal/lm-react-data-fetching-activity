@@ -14,7 +14,7 @@
 2. Pass the data from the PoemContainer component to the PoemsList
 3. Add a loading state to provide feedback to the user that the poems are loading (there's a component ready for you to use)
 4. Add POST functionality to the app – there's a template component, but it doesn't post anything yet.
-5. Add PATCH functionality to enable you to like a poem.
+5. Add PATCH functionality in the `Poem` component, enabling you to (un)like a poem.
 6. Refactor your data fetching to use TanStack Query.
 
    **Extension**
@@ -25,7 +25,11 @@
 
    - [TanStack Dev Tools](https://tanstack.com/query/latest/docs/react/devtools)
 
-8. Axios is generally considered the go-to library for anyone wanting to move beyond `fetch` for data fetching operations in the JavaScript ecosystem. Consider swapping out your fetch methods to use Axios instead.
+8. Create a search component that uses debouncing to periodically update the poems list as the user searches.
+
+   > It's up to you whether the search should filter by title, body text, author – or perhaps all three!
+
+9. Axios is generally considered the go-to library for anyone wanting to move beyond `fetch` for data fetching operations in the JavaScript ecosystem. Consider swapping out your fetch methods to use Axios instead.
 
    - [Axios Documentation](https://axios-http.com/docs/intro)
    - [A Handy Article from FreeCodeCamp](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
@@ -84,3 +88,5 @@ Sure, this is just a mock API, built with MirageJs, but it still has a guide!
     isLiked: false,
   }
 ```
+
+- PATCH "/poetriumph.com/api/v1/poems/:id
