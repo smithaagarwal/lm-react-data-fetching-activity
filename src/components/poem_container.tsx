@@ -16,6 +16,7 @@ export const PoemContainer: React.FC = () => {
       const data = await fetch("/poetriumph.com/api/v1/poems")
       const result: PoemsResponse = await data.json()
       console.log(result)
+      setPoems(result);
     }
     getPoems()
   }, [])
